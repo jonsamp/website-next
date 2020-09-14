@@ -1,0 +1,119 @@
+// Fonts
+
+@font-face {
+  font-family: "WorkSans-Black";
+  src: url("/fonts/WorkSans-Black.otf");
+  font-weight: bold;
+  font-display: auto;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sentinel-book";
+  src: url("/fonts/sentinel-book.otf");
+  font-weight: normal;
+  font-display: auto;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sentinel-book";
+  src: url("/fonts/sentinel-bookItalic.otf");
+  font-weight: normal;
+  font-display: auto;
+  font-style: italic;
+}
+
+// Functions
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Mixins
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+// Variables
+
+$min-width: 320px;
+$max-width: 1200px;
+$min-font: 16px;
+$max-font: 26px;
+$mod-1: 1.2; // mobile
+$mod-2: 1.5; // desktop
+
+// Styles
+
+html {
+  @include fluid-type($min-width, $max-width, $min-font, $max-font);
+}
+
+html,
+body {
+  font-family: sentinel-book, $font-fallback;
+  line-height: 150%;
+}
+
+h1 {
+  font-size: $mod-1 * $mod-1 * $mod-1 * $mod-1 * 1rem;
+  @include fluid-type(
+    $min-width,
+    $max-width,
+    $mod-1 * $mod-1 * $mod-1 * $mod-1 * $min-font,
+    $mod-2 * $mod-2 * $mod-2 * $mod-2 * $min-font
+  );
+  font-family: WorkSans-Black, $font-fallback;
+}
+
+h2 {
+  font-size: $mod-1 * $mod-1 * $mod-1 * 1rem;
+  @include fluid-type(
+    $min-width,
+    $max-width,
+    $mod-1 * $mod-1 * $mod-1 * $min-font,
+    $mod-2 * $mod-2 * $mod-2 * $min-font
+  );
+  font-family: WorkSans-Black, $font-fallback;
+}
+
+h3 {
+  font-size: $mod-1 * $mod-1 * 1rem;
+  @include fluid-type(
+    $min-width,
+    $max-width,
+    $mod-1 * $mod-1 * $min-font,
+    $mod-2 * $mod-2 * $min-font
+  );
+  font-family: WorkSans-Black, $font-fallback;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  font-weight: normal;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
