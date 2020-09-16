@@ -112,6 +112,8 @@ h3 {
     $mod-2 * $mod-2 * $min-font
   );
   font-family: WorkSans-Black, $font-fallback;
+  margin-block-end: 0rem;
+  margin-block-start: 0rem;
 }
 
 a {

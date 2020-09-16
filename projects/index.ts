@@ -1,1 +1,121 @@
-export const projects = {}
+export type Project = {
+  displayed: boolean;
+  title: string;
+  year: number;
+  description: string;
+  links: {
+    [i: string]: string;
+  }
+}
+
+export const projects: Project[] = [
+  {
+    displayed: true,
+    title: "Gray One",
+    year: 2020,
+    description:
+      "Gray One allows you to journal about everyday moments to once-in-a-lifetime events with a simple and elegant interface. Start journaling in an instant.",
+    links: {
+      apple: "https://apps.apple.com/us/app/gray-one/id1515200066?ls=1",
+      website: "https://jovial-sammet-3cec91.netlify.app/",
+      github: "https://github.com/jonsamp/gray-one",
+      android:
+        "https://play.google.com/store/apps/details?id=com.jonsamp.grayone",
+    },
+  },
+  {
+    displayed: true,
+    title: "Word Check",
+    year: 2020,
+    description:
+      "The fastest and easiest way to check if a word is playable in the game of Scrabble.",
+    links: {
+      apple:
+        "https://apps.apple.com/us/app/word-check-for-scrabble/id1489890340",
+    },
+  },
+  {
+    displayed: true,
+    title: "Single Origin 2",
+    year: 2019,
+    description:
+      "Learn to brew specialty coffee with step by step instructions, calculations, and timers. Now on iPhone and iPad.",
+    links: {
+      website: "https://singleoriginapp.com/",
+      apple:
+        "https://apps.apple.com/us/app/single-origin-2-coffee-timer/id1480168613?ls=1",
+      android:
+        "https://play.google.com/store/apps/details?id=com.jonsamp.singleorigintwo",
+    },
+  },
+  {
+    displayed: true,
+    title: "Codecademy Go",
+    year: 2019,
+    description:
+      "Practice and review coding anywhere in five minutes, built with Expo. Apple App Store “App of the Day”, June 3, 2019.",
+    links: {
+      apple: "https://itunes.apple.com/us/app/codecademy-go/id1376029326?mt=8",
+    },
+  },
+  {
+    displayed: true,
+    title: "Codecademy Go Cast",
+    year: 2019,
+    description: "A podcast about building and maintaining Codecademy Go.",
+    links: {
+      apple:
+        "https://itunes.apple.com/us/podcast/codecademy-go-cast/id1450421834",
+    },
+  },
+  {
+    displayed: true,
+    title: "react-native-expo-svg",
+    year: 2019,
+    description:
+      "Take a regular SVG, optimized it with SVGO, then creates an Expo-friendly SVG JS file for React Native.",
+    links: {
+      github: "https://github.com/jonsamp/react-native-expo-svg",
+      website: "/react-native-expo-svg",
+    },
+  },
+  {
+    displayed: true,
+    title: "Single Origin",
+    year: 2018,
+    description: "Learn to brew specialty coffee.",
+    links: {
+      github:
+        "https://apps.apple.com/us/app/single-origin-coffee-timer/id1316843624?ls=1",
+    },
+  },
+  {
+    displayed: true,
+    title: "date-streaks",
+    year: 2018,
+    description: "Find a variety of streak metrics from a list of dates.",
+    links: {
+      github: "https://github.com/jonsamp/date-streaks",
+    },
+  },
+  {
+    displayed: false,
+    title: "react-native-header-scroll-view",
+    year: 2018,
+    description:
+      "A React Native component that creates a Apple-esque large header that fades in a smaller header as you scroll.",
+    links: {
+      github: "https://github.com/jonsamp/react-native-header-scroll-view",
+    },
+  },
+  {
+    displayed: false,
+    title: "Vent",
+    year: 2017,
+    description:
+      "Journaling app with sentiment analysis. You write, then it reveals your subconscious. It's spontaneous self reflection.",
+    links: {
+      website: "https://frozen-retreat-69078.herokuapp.com/",
+    },
+  },
+]
