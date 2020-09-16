@@ -2,23 +2,29 @@
 
 @font-face {
   font-family: "WorkSans-Black";
-  src: url("/fonts/WorkSans-Black.otf");
-  font-weight: bold;
-  font-display: auto;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sentinel-book";
-  src: url("/fonts/sentinel-book.otf");
+  src: url("/fonts/WorkSans-Black.woff2") format("woff2"),
+    url("/fonts/WorkSans-Black.woff") format("woff"),
+    url("/fonts/WorkSans-Black.ttf") format("truetype");
   font-weight: normal;
   font-display: auto;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "sentinel-book";
-  src: url("/fonts/sentinel-bookItalic.otf");
+  font-family: "Sentinel-Book";
+  src: url("/fonts/Sentinel-Book.woff2") format("woff2"),
+    url("/fonts/Sentinel-Book.woff") format("woff"),
+    url("/fonts/Sentinel-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-display: auto;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sentinel-Book";
+  src: url("/fonts/Sentinel-BookItalic.woff2") format("woff2"),
+    url("/fonts/Sentinel-BookItalic.woff") format("woff"),
+    url("/fonts/Sentinel-BookItalic.ttf") format("truetype");
   font-weight: normal;
   font-display: auto;
   font-style: italic;
@@ -58,10 +64,10 @@
 
 $min-width: 320px;
 $max-width: 1200px;
-$min-font: 16px;
+$min-font: 18px;
 $max-font: 26px;
 $mod-1: 1.2; // mobile
-$mod-2: 1.5; // desktop
+$mod-2: 1.35; // desktop
 
 // Styles
 
@@ -71,8 +77,8 @@ html {
 
 html,
 body {
-  font-family: sentinel-book, $font-fallback;
-  line-height: 150%;
+  font-family: "Sentinel-Book", $font-fallback;
+  line-height: 140%;
 }
 
 h1 {
@@ -112,8 +118,10 @@ a {
   color: $primary;
   text-decoration: none;
   font-weight: normal;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+p {
+  margin-block-start: 0;
 }
