@@ -1,12 +1,12 @@
-import Head from "next/head";
-import { useDarkMode } from "next-dark-mode";
-import { useState } from "react";
+import Head from "next/head"
+import { useDarkMode } from "next-dark-mode"
+import { useState } from "react"
 
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Home.module.scss"
 
 export default function Home() {
-  const [bioIndex, setBioIndex] = useState(0);
-  const { darkModeActive } = useDarkMode();
+  const [bioIndex, setBioIndex] = useState(0)
+  const { darkModeActive } = useDarkMode()
 
   return (
     <div
@@ -16,22 +16,22 @@ export default function Home() {
     >
       <Head>
         <title>Jon Samp's Website</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={`${styles.me} ${styles.displayHorizontal}`}>
-          <img src='/yellow.jpg' className={styles.avatar} />
+          <img src="/yellow.jpg" className={styles.avatar} />
           <h1>Jon Samp</h1>
         </div>
         <p>
-          👋 Hi! I'm a software developer at <a href='https://expo.io'>Expo</a>{" "}
+          👋 Hi! I'm a software developer at <a href="https://expo.io">Expo</a>{" "}
           in New York City, where I work on frontend and design projects. I love
           creating quality user experiences with JavaScript, React Native, and
           Expo. You can find me on{" "}
-          <a href='https://github.com/jonsamp'>GitHub</a>,{" "}
-          <a href='https://codepen.io/jonsamp/pens/public'>Codepen</a>, and{" "}
-          <a href='https://twitter.com/jonsamp'>Twitter</a>. Also, there's a
+          <a href="https://github.com/jonsamp">GitHub</a>,{" "}
+          <a href="https://codepen.io/jonsamp/pens/public">Codepen</a>, and{" "}
+          <a href="https://twitter.com/jonsamp">Twitter</a>. Also, there's a
           list of my side-projects and packages below. Thanks for stopping by!{" "}
           {bioIndex === 0 && (
             <a onClick={() => setBioIndex(1)}>
@@ -65,7 +65,7 @@ export default function Home() {
             developer. While I didn't know JavaScript, they took a chance on me
             and I studied JavaScript every day on the train. I eventually wrote
             a whole{" "}
-            <a href='https://www.codecademy.com/learn/introduction-to-javascript'>
+            <a href="https://www.codecademy.com/learn/introduction-to-javascript">
               course on JavaScript
             </a>
             . I still think about JavaScript every day (Isn't it so wonderful?).{" "}
@@ -80,12 +80,12 @@ export default function Home() {
           <p>
             Finally, I moved to New York City. Specifically Brooklyn. I have a
             Shiba Inu named Nikko (she has a{" "}
-            <a href='https://www.instagram.com/nikko__dog/'>
+            <a href="https://www.instagram.com/nikko__dog/">
               must-see Instagram
             </a>
             ) and an Orange Tabby named Proxie. I love to run, brew specialty
             coffee, and cook everything I see on{" "}
-            <a href='https://www.foodnetwork.com/shows/good-eats'>Good Eats</a>.
+            <a href="https://www.foodnetwork.com/shows/good-eats">Good Eats</a>.
           </p>
         )}
       </main>
@@ -101,5 +101,5 @@ export default function Home() {
         </a> */}
       </footer>
     </div>
-  );
+  )
 }
