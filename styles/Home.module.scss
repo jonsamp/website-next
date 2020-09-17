@@ -30,6 +30,10 @@
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 }
 
+.aboutMe.dark {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
 .displayHorizontal {
   display: grid;
   grid-template-columns: auto 1fr;

@@ -22,7 +22,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <section className={styles.aboutMe}>
+        <section
+          className={`${styles.aboutMe} ${darkModeActive && styles.dark}`}
+        >
           <div className={`${styles.me} ${styles.displayHorizontal}`}>
             <img src="/yellow.jpg" className={styles.avatar} />
             <h1>Jon Samp</h1>
@@ -98,9 +100,11 @@ export default function Home() {
         </section>
 
         <section className={styles.projectsSection}>
-          {projects.map((project) => (
-            <Project project={project} key={project.title} />
-          ))}
+          {projects
+            .filter((project) => project.displayed)
+            .map((project) => (
+              <Project project={project} key={project.title} />
+            ))}
         </section>
       </main>
     </div>
