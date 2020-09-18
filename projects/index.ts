@@ -3,7 +3,7 @@ export type Project = {
   title: string
   year: number
   description: string
-  image?: string
+  image: string
   links: {
     [i: string]: string
   }
@@ -124,6 +124,7 @@ export const projects: Project[] = [
     displayed: false,
     title: "Vent",
     year: 2017,
+    image: "/images/github.png",
     description:
       "Journaling app with sentiment analysis. You write, then it reveals your subconscious. It's spontaneous self reflection.",
     links: {
