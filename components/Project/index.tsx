@@ -26,21 +26,26 @@ export function Project(props: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.titleContainer}>
-        <h3 className={styles.title}>{project.title}</h3>
-        {Object.entries(project.links)
-          .sort(byKey)
-          .map(([key, link]) => (
-            <a href={link} key={link}>
-              <div
-                className={`${styles.link} ${darkModeActive && styles.dark}`}
-              >
-                {iconMap[key]}
-              </div>
-            </a>
-          ))}
+      {project.image && (
+        <img src={project.image} className={styles.projectImage} />
+      )}
+      <div>
+        <div className={styles.titleContainer}>
+          <h3 className={styles.title}>{project.title}</h3>
+          {Object.entries(project.links)
+            .sort(byKey)
+            .map(([key, link]) => (
+              <a href={link} key={link}>
+                <div
+                  className={`${styles.link} ${darkModeActive && styles.dark}`}
+                >
+                  {iconMap[key]}
+                </div>
+              </a>
+            ))}
+        </div>
+        <p>{project.description}</p>
       </div>
-      <p>{project.description}</p>
     </div>
   )
 }
