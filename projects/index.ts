@@ -11,7 +11,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    displayed: true,
+    displayed: false,
     title: "Gray One",
     year: 2020,
     image: "/images/gray-one.png",

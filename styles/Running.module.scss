@@ -1,0 +1,77 @@
+@import "variables";
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 40px;
+}
+
+.headerContainer {
+  margin-left: 20px;
+}
+
+.header {
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+
+.cardContainer {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.rowLast {
+  border-bottom: none;
+}
+
+.differenceContainer {
+  text-align: center;
+  padding: 40px;
+
+  > h1,
+  h2,
+  p {
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  > h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.calContainer {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.calHeader {
+  background: #c73f3f;
+  padding: 15px;
+  color: white;
+}
+
+.calDate {
+  padding: 10px;
+  font-size: 4em;
+}

@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.circleLabel {
+  transform: translateY(0.75ch);
+}
+
+.circleValue {
+  font-size: 1.75ch;
+  font-family: "WorkSans-Black";
+  line-height: 1;
+  text-anchor: middle;
+  transform: translateY(-0.5ch);
+}
+
+.circleLabel {
+  font-size: 0.65ch;
+  text-anchor: middle;
+}
