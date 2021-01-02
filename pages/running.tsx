@@ -62,23 +62,6 @@ export default function RunningPage() {
     return Math.floor(diff / oneDay)
   }
 
-  function format(date, y) {
-    var z = {
-      M: date.getMonth() + 1,
-      d: date.getDate(),
-      h: date.getHours(),
-      m: date.getMinutes(),
-      s: date.getSeconds(),
-    }
-    y = y.replace(/(M+|d+|h+|m+|s+)/g, function (v) {
-      return ((v.length > 1 ? "0" : "") + eval("z." + v.slice(-1))).slice(-2)
-    })
-
-    return y.replace(/(y+)/g, function (v) {
-      return date.getFullYear().toString().slice(-v.length)
-    })
-  }
-
   function dateFromDay(day) {
     let date = new Date(2021, 0) // initialize a date in `year-01-01`
     const monthNames = [
@@ -108,19 +91,6 @@ export default function RunningPage() {
 
   function goalForToday() {
     return milesPerDay() * dayOfYear()
-  }
-
-  function compareActualMiles() {
-    if (!actualMiles) {
-      return
-    }
-
-    console.log(
-      `Actual:  ${actualMiles} miles (${(actualMiles / 10).toFixed(
-        2
-      )}% of goal)\nTo go:   ${1000 - actualMiles} miles
-      `
-    )
   }
 
   function estimatedEndDate() {
