@@ -79,21 +79,38 @@ export default function RunningPage() {
 
   useEffect(function didMount() {
     async function getStats() {
-      // const result = await fetch(
-      //   "https://www.strava.com/api/v3/athletes/19827606/stats",
-      //   {
-      //     method: "GET",
-      //     headers: {
-      //       Authorization: "Bearer bab63e31851196590c3d72bd65b5a4340e9e1e69",
-      //     },
-      //   }
-      // )
-      //
-      // const data = await result.json()
-      //
-      // console.log(JSON.stringify(data))
+      const oauthResultData = await fetch(
+        "https://www.strava.com/api/v3/oauth/token",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            client_id: "58877",
+            client_secret: "b1ccf61ca736c92561e92275d2624c46db536648",
+            refresh_token: "b4d19bde62e7b68a4cd7fb205fe5338b9e108d39",
+            grant_type: "refresh_token",
+          }),
+        }
+      )
 
-      setResult(mockData)
+      const oauthResult = await oauthResultData.json()
+
+      const result = await fetch(
+        "https://www.strava.com/api/v3/athletes/19827606/stats",
+        {
+          method: "GET",
+          headers: {
+            // @ts-ignore
+            Authorization: `Bearer ${oauthResult.access_token}`,
+          },
+        }
+      )
+
+      const data = await result.json()
+
+      setResult(data)
     }
     getStats()
   }, [])
