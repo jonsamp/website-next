@@ -3,79 +3,8 @@ import styles from "../styles/Running.module.scss"
 
 import { CircleProgressBar } from "../components/CircleProgressBar"
 
-const mockData = {
-  biggest_ride_distance: 18930.4,
-  biggest_climb_elevation_gain: null,
-  recent_ride_totals: {
-    count: 0,
-    distance: 0,
-    moving_time: 0,
-    elapsed_time: 0,
-    elevation_gain: 0,
-    achievement_count: 0,
-  },
-  all_ride_totals: {
-    count: 30,
-    distance: 329388,
-    moving_time: 55922,
-    elapsed_time: 63402,
-    elevation_gain: 3051,
-  },
-  recent_run_totals: {
-    count: 9,
-    distance: 69274.400390625,
-    moving_time: 23683,
-    elapsed_time: 26204,
-    elevation_gain: 523.3059921264648,
-    achievement_count: 0,
-  },
-  all_run_totals: {
-    count: 206,
-    distance: 1802205,
-    moving_time: 611812,
-    elapsed_time: 648223,
-    elevation_gain: 13024,
-  },
-  recent_swim_totals: {
-    count: 0,
-    distance: 0,
-    moving_time: 0,
-    elapsed_time: 0,
-    elevation_gain: 0,
-    achievement_count: 0,
-  },
-  all_swim_totals: {
-    count: 0,
-    distance: 0,
-    moving_time: 0,
-    elapsed_time: 0,
-    elevation_gain: 0,
-  },
-  ytd_ride_totals: {
-    count: 0,
-    distance: 0,
-    moving_time: 0,
-    elapsed_time: 0,
-    elevation_gain: 0,
-  },
-  ytd_run_totals: {
-    count: 1,
-    distance: 14481,
-    moving_time: 4849,
-    elapsed_time: 4982,
-    elevation_gain: 124,
-  },
-  ytd_swim_totals: {
-    count: 0,
-    distance: 0,
-    moving_time: 0,
-    elapsed_time: 0,
-    elevation_gain: 0,
-  },
-}
-
 export default function RunningPage() {
-  const [result, setResult] = useState<any | undefined>(mockData)
+  const [result, setResult] = useState<any | undefined>()
 
   useEffect(function didMount() {
     async function getStats() {
