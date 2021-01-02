@@ -44,7 +44,7 @@ export default function RunningPage() {
     getStats()
   }, [])
 
-  if (!result.ytd_run_totals) {
+  if (!result?.ytd_run_totals) {
     return <p>loading...</p>
   }
 
