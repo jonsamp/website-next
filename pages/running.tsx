@@ -111,7 +111,7 @@ export default function RunningPage() {
       now = new Date(date)
     }
     var start = new Date(now.getFullYear(), 0, 0)
-    var diff = now - start
+    var diff = Number(now) - Number(start)
     var oneDay = 1000 * 60 * 60 * 24
     return Math.floor(diff / oneDay)
   }
