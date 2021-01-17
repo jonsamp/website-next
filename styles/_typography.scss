@@ -30,6 +30,15 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Sentinel-Bold";
+  src: url("/fonts/Sentinel-Bold.woff2") format("woff2"),
+    url("/fonts/Sentinel-Bold.woff") format("woff"),
+    url("/fonts/Sentinel-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: auto;
+}
+
 // Functions
 
 @function strip-unit($value) {
