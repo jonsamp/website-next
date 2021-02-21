@@ -1,5 +1,5 @@
 import React from "react"
-import { useDarkMode } from "next-dark-mode"
+import { theme } from "@expo/styleguide"
 
 import { Project as ProjectType } from "../../projects"
 import { AppleIcon, AndroidIcon, GitHubIcon, WebsiteIcon } from "../Icons/index"
@@ -11,7 +11,6 @@ type Props = {
 
 export function Project(props: Props) {
   const { project } = props
-  const { darkModeActive } = useDarkMode()
 
   const iconMap = {
     apple: <AppleIcon />,
@@ -36,9 +35,10 @@ export function Project(props: Props) {
               .map(([key, link]) => (
                 <a href={link} key={link}>
                   <div
-                    className={`${styles.link} ${
-                      darkModeActive && styles.dark
-                    }`}
+                    className={styles.link}
+                    style={{
+                      color: theme.background.default,
+                    }}
                   >
                     {iconMap[key]}
                   </div>

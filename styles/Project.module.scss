@@ -4,7 +4,7 @@
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 0.5rem;
+  gap: 1rem;
 
   @media (max-width: $breakpoint) {
     grid-template-columns: 1fr;
@@ -34,6 +34,12 @@
   display: grid;
   grid-template-columns: repeat(4, auto);
   column-gap: 0.35rem;
+  transition: 50ms;
+
+  :hover {
+    opacity: 0.9;
+    transition: 50ms;
+  }
 }
 
 .link {
@@ -42,18 +48,13 @@
   min-height: 24px;
   min-width: 24px;
   background-color: $primary;
-  padding: 6px;
-  border-radius: 3px;
-  color: $background-light;
+  padding: 5px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 1px;
-}
-
-.link.dark {
-  color: $background-dark;
 }
 
 .projectImage {

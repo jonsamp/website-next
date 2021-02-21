@@ -35,6 +35,8 @@ export const projects: Project[] = [
     links: {
       apple:
         "https://apps.apple.com/us/app/word-check-for-scrabble/id1489890340",
+      android:
+        "https://play.google.com/store/apps/details?id=com.jonsamp.wordcheck",
     },
   },
   {
