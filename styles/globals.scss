@@ -7,6 +7,7 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  background: var(--expo-theme-background-default);
 }
 
 * {
