@@ -1,4 +1,4 @@
-import "@expo/styleguide/dist/expo-colors.css"
+import "@expo/styleguide/dist/expo-theme.css"
 import { ThemeProvider } from "@expo/styleguide"
 
 import "../styles/globals.scss"

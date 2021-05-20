@@ -39,10 +39,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@expo/styleguide@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-2.1.4.tgz#6599008643ac8cdd9cb8cf6ce6055e0b7bfeb3da"
-  integrity sha512-6avY0jc9uwnaaHO2C6zITYnWsTZMx+EZuMW9EcdNpHkeibAgsHkGeH9ZEQDrxVGay+qu7HK8FI9lN2cY56ncZQ==
+"@expo/styleguide@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-3.1.1.tgz#f225e535884ce477dc1c1dad42640a8c3a1e8655"
+  integrity sha512-gFQC6u1P03CQIy20vWMIJbMoViseDkgZBw476B6SSYmlAXTl6XJPVJBgYCQXJlISnCiXXvWGYrGq/EDokW+2yA==
 
 "@hapi/accept@5.0.1":
   version "5.0.1"

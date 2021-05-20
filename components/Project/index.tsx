@@ -1,8 +1,14 @@
 import React from "react"
-import { theme, AppleIcon, AndroidIcon } from "@expo/styleguide"
+import {
+  theme,
+  AppleIcon,
+  AndroidIcon,
+  GithubIcon,
+  iconSize,
+} from "@expo/styleguide"
 
 import { Project as ProjectType } from "../../projects"
-import { GitHubIcon, WebsiteIcon } from "../Icons/index"
+import { WebsiteIcon } from "../Icons/index"
 import styles from "../../styles/Project.module.scss"
 
 type Props = {
@@ -13,10 +19,14 @@ export function Project(props: Props) {
   const { project } = props
 
   const iconMap = {
-    apple: <AppleIcon color={theme.background.default} />,
-    android: <AndroidIcon color={theme.background.default} />,
-    website: <WebsiteIcon />,
-    github: <GitHubIcon />,
+    apple: <AppleIcon color={theme.background.default} size={iconSize.small} />,
+    android: (
+      <AndroidIcon color={theme.background.default} size={iconSize.small} />
+    ),
+    website: <WebsiteIcon size={iconSize.small} />,
+    github: (
+      <GithubIcon color={theme.background.default} size={iconSize.small} />
+    ),
   }
 
   function byKey(a, b) {

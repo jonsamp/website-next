@@ -141,15 +141,15 @@ export default function RunningPage() {
               />
             </div>
             <div className={styles.headerRow}>
-              <p>Actual</p>
               <p>Goal</p>
+              <p>Actual</p>
               <p>Diff</p>
             </div>
             <div className={styles.row}>
               <p className={styles.rowTitle}>Total miles</p>
               <div className={styles.rowInner}>
-                <p>{actualMiles.toFixed(2).toLocaleString()}</p>
                 <p>{goalForToday().toFixed(2).toLocaleString()}</p>
+                <p>{actualMiles.toFixed(2).toLocaleString()}</p>
                 <p>
                   {actualMiles - goalForToday() >= 0 ? "+ " : "- "}
                   {Math.abs(actualMiles - goalForToday())
@@ -161,8 +161,8 @@ export default function RunningPage() {
             <div className={styles.row}>
               <p className={styles.rowTitle}>Average miles/month</p>
               <div className={styles.rowInner}>
-                <p>{(actualMiles / (dayOfYear() / 30.416666)).toFixed(2)}</p>
                 <p>{(goalForToday() / (dayOfYear() / 30.416666)).toFixed(2)}</p>
+                <p>{(actualMiles / (dayOfYear() / 30.416666)).toFixed(2)}</p>
                 <p>
                   {actualMiles / (dayOfYear() / 30.416666) -
                     goalForToday() / (dayOfYear() / 30.416666) >=
@@ -179,8 +179,8 @@ export default function RunningPage() {
             <div className={styles.row}>
               <p className={styles.rowTitle}>Average miles/week</p>
               <div className={styles.rowInner}>
-                <p>{(actualMiles / (dayOfYear() / 7)).toFixed(2)}</p>
                 <p>{(goalForToday() / (dayOfYear() / 7)).toFixed(2)}</p>
+                <p>{(actualMiles / (dayOfYear() / 7)).toFixed(2)}</p>
                 <p>
                   {actualMiles / (dayOfYear() / 7) -
                     goalForToday() / (dayOfYear() / 7) >=
@@ -197,8 +197,8 @@ export default function RunningPage() {
             <div className={styles.row}>
               <p className={styles.rowTitle}>Average miles/day</p>
               <div className={styles.rowInner}>
-                <p>{(actualMiles / dayOfYear()).toFixed(2)}</p>
                 <p>{(goalForToday() / dayOfYear()).toFixed(2)}</p>
+                <p>{(actualMiles / dayOfYear()).toFixed(2)}</p>
                 <p>
                   {actualMiles / dayOfYear() - goalForToday() / dayOfYear() >= 0
                     ? "+ "
@@ -218,8 +218,7 @@ export default function RunningPage() {
           <div
             className={`${styles.cardContainer} ${styles.differenceContainer}`}
           >
-            <h1>{mileDifference} miles</h1>
-            <h2>({daysDifference} days)</h2>
+            <h1>{daysDifference} days</h1>
             <p>{status}</p>
           </div>
 
