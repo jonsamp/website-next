@@ -97,7 +97,7 @@ export const projects: Project[] = [
     description: "Learn to brew specialty coffee.",
     image: "/images/single-origin.png",
     links: {
-      github:
+      apple:
         "https://apps.apple.com/us/app/single-origin-coffee-timer/id1316843624?ls=1",
     },
   },
