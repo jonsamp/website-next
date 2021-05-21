@@ -45,7 +45,7 @@ export default function Home() {
             front-end and design projects. I love creating quality user
             experiences with JavaScript, React Native, and Expo. You can find me
             on <a href="https://github.com/jonsamp">GitHub</a>,{" "}
-            <a href="https://codepen.io/jonsamp/pens/public">Codepen</a>, and{" "}
+            <a href="https://dribbble.com/jonsamp">Dribbble</a>, and{" "}
             <a href="https://twitter.com/jonsamp">Twitter</a>. Also, there's a
             list of my side-projects and packages below. Thanks for stopping by!{" "}
             {bioIndex === 0 && (
