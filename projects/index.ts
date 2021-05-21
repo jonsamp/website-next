@@ -65,6 +65,7 @@ export const projects: Project[] = [
       apple: "https://itunes.apple.com/us/app/codecademy-go/id1376029326?mt=8",
       android:
         "https://play.google.com/store/apps/details?id=com.ryzac.codecademygo&hl=en_US",
+      website: "https://apps.apple.com/us/story/id1458810005",
     },
   },
   {
