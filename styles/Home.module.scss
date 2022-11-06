@@ -25,7 +25,7 @@
 .displayHorizontal {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: 0.5rem;
+  grid-gap: 0.75rem;
   align-items: center;
 }
 
@@ -36,6 +36,6 @@
 .avatar {
   height: 3rem;
   width: 3rem;
-  border-radius: 0.35rem;
-  box-shadow: var(--expo-theme-shadows-small);
+  border-radius: 100rem;
+  box-shadow: var(--expo-theme-shadows-tiny);
 }

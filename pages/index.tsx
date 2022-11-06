@@ -34,7 +34,7 @@ export default function Home() {
               src="/yellow.jpg"
               className={styles.avatar}
               style={{
-                border: `4px solid ${theme.border.default}`,
+                border: `4px solid ${theme.background.default}`,
               }}
             />
             <h1>Jon Samp</h1>
@@ -52,9 +52,8 @@ export default function Home() {
             impersonating me.
           </p>
           <p>
-            👋 Hi! I'm a software developer at{" "}
-            <a href="https://expo.io">Expo</a> in New York City, where I work on
-            front-end and design projects. I love creating quality user
+            👋 Hi! I'm a developer and designer at{" "}
+            <a href="https://expo.io">Expo</a>. I love creating quality user
             experiences with JavaScript, React Native, and Expo. You can find me
             on <a href="https://github.com/jonsamp">GitHub</a>,{" "}
             <a href="https://dribbble.com/jonsamp">Dribbble</a>, and{" "}
