@@ -38,7 +38,7 @@ export default function Orbit() {
           <img src="/images/orbit/green-2.jpeg" style={{ width: '75%', margin: '2rem auto' }} />
           <p>I also noticed that the black pad the non-stationary burr sits on was not in great shape. Is this normal?:</p>
           <img src="/images/orbit/pad.jpeg" style={{ width: '75%', margin: '2rem auto' }} />
-          <p>So, after all of this, I continued to do the marker test, and it took me far too long to realize that I could use the screws to adjust the burrs instead of using shims (I am a creature of habit). And I finally got a clean test today. The burrs are now aligned. Look at this graph, this is some good stuff! I can confirm this coffee was <em>much</em> better than anything before.</p>
+          <p>So, after all of this, I continued to do the marker test, and it took me far too long to realize that I could use the screws to adjust the burrs instead of using shims (I am a creature of habit).</p><p>By doing a marker test, taking the burr off, and turning two screws a half turn, I finally got a clean test today. The burrs are now aligned. Look at this graph, this is some good stuff! I can confirm this coffee was <em>much</em> better than anything before.</p>
           <img src="/images/orbit/just-right.png" style={{ width: '100%', margin: '2rem auto' }} />
           <p>So! this has been my journey with the Orbit. After 4-5 days of tinkering, I think I got it right now.</p>
           <p>Some stuff I love:</p>
