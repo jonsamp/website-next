@@ -46,13 +46,15 @@ export default function Orbit() {
             <li>The auto-stop and purge is just wonderful</li>
             <li>Looks/feels really nice</li>
             <li>The knocker is satisfying to use</li>
+            <li>The stencil for adding the magnets to the Lunar was excellent</li>
           </ul>
           <p>Some stuff I'd love to improve:</p>
           <ul>
             <li>I have a new touch point now, but there's no way to get the sticker off cleanly. Wish I had some more stickers.</li>
+            <li>For a grinder that has so many intentional and opinionated details, the detent ring is really unopinionated, and doesn't feel like it belongs. But that may just be me, since I don't have a workflow for it.</li>
             <li>Using the scale with the Decent is somewhat annoying, but because of Decent and not Acaia. When the scale connects to the Decent, getting it to connect to the Acaia again means I have to manually tell the Decent to disconnect before the Orbit may connect. I think my solution is have to buy another Lunar if I want this to be smooth but they're not cheap so maybe some time next year 😅</li>
             </ul>
-            <p>Thanks for reading my story. I hope it helps you improve the grinder, and I am so relieved I got it working. Also, I got the swag box. Thanks for all the goodies. The brush was really nice during this process. Also the hat is surpisingly high quality. Hope you have a great coffee today. Please let me know if you have any questions or need anything else!</p>
+            <p>Thanks for reading my story. I hope it helps you improve the grinder, and I am so relieved I got it working. Also, I got the swag box. Thanks for all the goodies. The brush was really nice during this process. Also the hat is surpisingly high quality.</p><p> Hope you have a great coffee today. Please let me know if you have any questions or need anything else!</p>
             <p>~ Jon Samp</p>
       </main>
     </div>
