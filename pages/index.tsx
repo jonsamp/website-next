@@ -39,7 +39,7 @@ export default function Home() {
             />
             <h1>Jon Samp</h1>
           </div>
-          {/* <p
+          <p
             style={{
               padding: 16,
               background: theme.background.warning,
@@ -50,7 +50,7 @@ export default function Home() {
           >
             Notice: Please verify my identity with a video call. Someone is
             impersonating me.
-          </p> */}
+          </p>
           <p>
             👋 Hi! I'm a developer and designer at{" "}
             <a href="https://expo.io">Expo</a>. I love creating quality user
