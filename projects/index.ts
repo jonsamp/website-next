@@ -80,7 +80,7 @@ export const projects: Project[] = [
     },
   },
   {
-    displayed: true,
+    displayed: false,
     title: "react-native-expo-svg",
     year: 2019,
     image: "/images/github.png",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     },
   },
   {
-    displayed: true,
+    displayed: false,
     title: "Single Origin",
     year: 2018,
     description: "Learn to brew specialty coffee.",
