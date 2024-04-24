@@ -39,18 +39,6 @@ export default function Home() {
             />
             <h1>Jon Samp</h1>
           </div>
-          <p
-            style={{
-              padding: 16,
-              background: theme.background.warning,
-              border: `1px solid ${theme.border.warning}`,
-              borderRadius: 6,
-              fontSize: "80%",
-            }}
-          >
-            Notice: Please verify my identity with a video call. Someone is
-            impersonating me.
-          </p>
           <p>
             👋 Hi! I'm a developer and designer at{" "}
             <a href="https://expo.io">Expo</a>. I love creating quality user
