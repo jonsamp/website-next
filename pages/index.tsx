@@ -40,20 +40,19 @@ export default function Home() {
             <h1>Jon Samp</h1>
           </div>
           <p>
-            👋 Hi! I'm a developer and designer at{" "}
+            👋 Hi! I'm head of product at{" "}
             <a href="https://expo.io">Expo</a>. I love creating quality user
-            experiences with JavaScript, React Native, and Expo. You can find me
-            on <a href="https://github.com/jonsamp">GitHub</a>,{" "}
-            <a href="https://dribbble.com/jonsamp">Dribbble</a>, and{" "}
-            <a href="https://twitter.com/jonsamp">Twitter</a>. Also, there's a
+            experiences with TypeScript and Expo. You can find me
+            on <a href="https://github.com/jonsamp">GitHub</a>, and{" "}
+            <a href="https://x.com/jonsamp">X</a>. Also, there's a
             list of my side-projects and packages below. Thanks for stopping by!{" "}
-            {bioIndex === 0 && (
+            {/* {bioIndex === 0 && (
               <a onClick={() => setBioIndex(1)}>
                 <em>More...</em>
               </a>
-            )}
+            )} */}
           </p>
-          {bioIndex >= 1 && (
+          {/* {bioIndex >= 1 && (
             <p>
               Originally from Kansas, I started post-college life as a
               herpetology researcher (
@@ -106,7 +105,7 @@ export default function Home() {
               </a>
               .
             </p>
-          )}
+          )} */}
         </section>
 
         <section className={styles.projectsSection}>
