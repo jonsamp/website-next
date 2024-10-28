@@ -1,0 +1,168 @@
+export default function Workflows() {
+   return (
+    <p>
+        Builds, submissions, updates and more are all a part of delivering your app to users. Workflows consist of a sequence of jobs, which help you and your team get things done. You can do things like building your project, then submitting that build to the app stores. Since each job can have prerequisites and conditionals, you can automate you and your team’s release process.
+
+## Create a workflow file
+
+You can get started by creating a directory named **.eas/workflows** at the root of your project, then creating a **.yml** file inside of it. For example: **.eas/workflows/hello-world.yml**.
+
+## Create a workflow
+
+Each workflow consists of three top-level elements:
+
+- `name`: defines the name of the workflow. For example: “Hello World!”
+- `on`: defines when this workflow should be triggered. For example: when pushing a new commit to a GitHub branch.
+- `jobs`: a sequence of jobs which can depend on and pass data between each other. For example: a job that runs a unit test followed by a job that builds your project into an app.
+
+Here’s an example of a workflow that prints “Hello world!”:
+
+```yaml
+name: Hello World
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  Hello World:
+    steps:
+      - run: echo "Hello, World"
+```
+
+Here’s another example that creates and submits an iOS build of a project on every push to every branch:
+
+```yaml
+name: Release iOS app
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  build:
+    type: build
+    params:
+      platform: ios
+      profile: production
+  submit:
+    needs: [build]
+    type: submit
+    params:
+      build_id: ${'${{ needs.build.outputs.build_id }}'}
+```
+
+## Next steps
+
+Learn more about the building blocks of workflows:
+
+[Triggers](https://www.notion.so/Triggers-11be5b573524804299e9c52ee2aa1439?pvs=21)
+
+[Job types](https://www.notion.so/Job-types-11be5b5735248076bb85e5b8f6bd9314?pvs=21)
+
+Triggers define when a workflow should kick off.
+
+## On push
+
+When pushing a commit to GitHub.
+
+```yaml
+on:
+  push: ["*"] # branch names or globs
+```
+
+Workflows sequence jobs to get stuff done. Each job type has its own name and parameters. We provide managed jobs, which are prewritten and continuously maintained jobs that meet common use cases for developers, like building, submitting, and running end to end test. In addition, you can write custom jobs to get things done that are specific to you and your team’s project.
+
+## Build
+
+Creates a build from a project.
+
+```yaml
+type: build
+params:
+  platform: android | ios
+  profile: string # default: production
+```
+
+Outputs:
+
+```yaml
+build_id: string
+platform: android | ios
+```
+
+## Submit
+
+Submits a build.
+
+```yaml
+type: submit
+params:
+  profile: string # default: production
+  build_id: string
+```
+
+Outputs
+
+```yaml
+submission_id: string
+platform: android | ios
+```
+
+## Update
+
+Publish an update.
+
+```yaml
+type: update
+```
+
+## Maestro test
+
+Runs a Maestro test against a build on a simulate device.
+
+```yaml
+type: maestro
+params:
+  build_id: string
+  flow_path: string | string[] # string is a file path from the project root
+```
+
+## Custom
+
+Run any custom code.
+
+```yaml
+type: custom # default: undefined
+params:
+  resource_class: linux-c3d-standard-4 # (or -8)
+  outputs:
+	  output_name_for_workflow: ${'${{ steps.step_id.output_name_from_set_output }}'}
+  steps:
+	  # "uses" steps, use one from https://docs.expo.dev/custom-builds/schema/#built-in-eas-functions
+	  - uses: eas/checkout
+		  name: Checkout
+	  - uses: eas/use_npm_token
+	  # "run" steps
+	  - name: Lint
+		  run: yarn lint
+		- name: Do something and set output
+			id: step_id
+			run: |
+				FINGERPRINT_HASH=$(yarn expo fingerprint | jq '.hash')
+				set-output output_name_from_set_output $FINGERPRINT_HASH
+			# we also encourage you to define
+			outputs: [output_name_from_set_output]
+			# or
+			outputs:
+			  - name: output_name_from_set_output
+				  required: true # an output that is required=true
+              				   # and won't be set to a non-empty value
+              				   # causes step to error
+		- name: Do something with the output of the previous step
+			run: |
+				echo ${'${ steps.step_id.output_name_from_set_output }'}
+```
+    </p>
+   )
+}
