@@ -1,7 +1,4 @@
-export default function Workflows() {
-   return (
-    <p>
-        Builds, submissions, updates and more are all a part of delivering your app to users. Workflows consist of a sequence of jobs, which help you and your team get things done. You can do things like building your project, then submitting that build to the app stores. Since each job can have prerequisites and conditionals, you can automate you and your team’s release process.
+Builds, submissions, updates and more are all a part of delivering your app to users. Workflows consist of a sequence of jobs, which help you and your team get things done. You can do things like building your project, then submitting that build to the app stores. Since each job can have prerequisites and conditionals, you can automate you and your team’s release process.
 
 ## Create a workflow file
 
@@ -163,6 +160,3 @@ params:
 			run: |
 				echo ${'${ steps.step_id.output_name_from_set_output }'}
 ```
-    </p>
-   )
-}
