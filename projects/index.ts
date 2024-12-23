@@ -103,7 +103,7 @@ export const projects: Project[] = [
     },
   },
   {
-    displayed: true,
+    displayed: false,
     title: "date-streaks",
     image: "/images/github.png",
     year: 2018,
